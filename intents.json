@@ -1,0 +1,298 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hello", "Hi", "Hey"],
+      "responses": ["Hello! How can I assist you today?", "Hi there! What can I do for you?", "Hey! How can I help?"],
+      "context": []
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Goodbye", "Bye", "See you later"],
+      "responses": ["Goodbye! Have a great day.", "Bye! Take care.", "See you later!"],
+      "context": []
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "Appreciate it"],
+      "responses": ["You're welcome!", "No problem, happy to help!", "Glad I could assist you."],
+      "context": []
+    },
+    {
+      "tag": "introduction",
+      "patterns": ["Who are you?", "What's your name?", "Introduce yourself"],
+      "responses": ["I'm a virtual assistant here to help you.", "I'm a chatbot designed to assist with your inquiries.", "You can call me HistBot, how can I assist you today?"],
+      "context": []
+    },
+    {
+      "tag": "help",
+      "patterns": ["Help", "Assistance", "I need help"],
+      "responses": ["Sure, I'm here to help. What do you need assistance with?", "How can I assist you today?", "I'm here to help. Please let me know what you're looking for."],
+      "context": []
+    },
+    {
+      "tag": "yes",
+      "patterns": ["Yes", "Yep", "Sure"],
+      "responses": ["Great!", "Awesome!", "Perfect!"],
+      "context": []
+    },
+    {
+      "tag": "no",
+      "patterns": ["No", "Nope", "I don't think so"],
+      "responses": ["Okay", "No problem", "If you change your mind, feel free to ask."],
+      "context": []
+    },
+    {
+      "tag": "about_you",
+      "patterns": ["Tell me about yourself", "What can you do?", "Your abilities"],
+      "responses": ["I'm a virtual assistant powered by AI. I can help with information, answer questions, and more. Feel free to ask me anything!", "I'm here to assist you with various tasks and provide information. How can I assist you today?"],
+      "context": []
+    },
+    {
+      "tag": "mood",
+      "patterns": ["How are you feeling?", "What's your mood?", "Tell me your emotions"],
+      "responses": ["I don't have feelings, but I'm here and ready to assist you!", "I'm always in a helpful mood. How can I assist you today?", "I'm a virtual assistant, so my mood is always ready to assist!"],
+      "context": []
+    },
+    {
+      "tag": "shivaji_birth_celebration",
+      "patterns": ["How do we celebrate Shivaji Maharaj's birth anniversary?", "Tell me about the celebration of Shivaji Maharaj's birthday", "What happens on Shivaji Maharaj Jayanti?"],
+      "responses": ["Shivaji Maharaj's birth anniversary is celebrated with great pomp and reverence. People sing songs and 'powadas' in his honor. Children garland his picture and say 'Shivaji Maharaj Ki Jai.'", "The celebration of Shivaji Maharaj's birth anniversary involves singing, 'powadas,' garlanding his picture, and expressing reverence for his contributions."],
+      "context": []
+    },
+    {
+      "tag": "shivaji_identity",
+      "patterns": ["Who was Shivaji Maharaj?", "Tell me about Shivaji Maharaj", "What is Shivaji Maharaj known for?"],
+      "responses": ["Shivaji Maharaj was a great man who established Swaraj in Maharashtra. He is celebrated for his noble deeds and contributions to the welfare of the people.", "Shivaji Maharaj was a prominent figure known for establishing self-government in Maharashtra and working for the welfare of his subjects."],
+      "context": []
+    },
+    {
+      "tag": "shivaji_time_period",
+      "patterns": ["In which time period did Shivaji Maharaj live?", "What was the historical period of Shivaji Maharaj?", "Tell me about the medieval period of Shivaji Maharaj."],
+      "responses": ["Shivaji Maharaj lived during the medieval period when monarchy and the rule of kings prevailed. It was a time of diverse rulers, both benevolent and self-indulgent.", "Shivaji Maharaj lived in the medieval period, characterized by the prevalence of monarchy and varied rulers with different approaches to governance."],
+      "context": []
+    },
+    {
+      "tag": "swaraj_establishment",
+      "patterns": ["How did Shivaji Maharaj establish Swaraj?", "Tell me about the establishment of Swaraj in Maharashtra", "What were Shivaji Maharaj's efforts for Swaraj?"],
+      "responses": ["Shivaji Maharaj established Swaraj in Maharashtra by uniting Watandars, fighting against oppressive powers, and ensuring justice, fair play, and equal treatment for all.", "The establishment of Swaraj by Shivaji Maharaj involved bringing Watandars together, defeating oppressive powers, and promoting justice and equality for all castes and religions."],
+      "context": []
+    },
+    {
+      "tag": "maharashtra_under_oppression",
+      "patterns": ["What was the state of Maharashtra before Shivaji Maharaj?", "Tell me about the oppression in Maharashtra before Shivaji", "How were the people of Maharashtra affected before Shivaji Maharaj?"],
+      "responses": ["Before Shivaji Maharaj, Maharashtra was not free and was under the rule of the Nizamshah and Adilshah. The people faced oppression, injustice, and constant fighting among Watandars.", "Maharashtra, before Shivaji Maharaj, suffered under the rule of Nizamshah and Adilshah, leading to oppression, injustice, and internal conflicts among Watandars."],
+      "context": []
+    },
+    {
+      "tag": "noble_task_of_shivaji",
+      "patterns": ["What noble task did Shivaji Maharaj undertake?", "Tell me about Shivaji Maharaj's noble mission", "What was the purpose of Shivaji Maharaj's efforts?"],
+      "responses": ["Shivaji Maharaj undertook the noble task of establishing Swaraj in Maharashtra to bring happiness and welfare to the people. He addressed internal conflicts and fought against oppressive rulers.", "The noble task of Shivaji Maharaj was to establish Swaraj in Maharashtra, bringing happiness by addressing internal conflicts and challenging oppressive rulers."],
+      "context": []
+    },
+    {
+      "tag": "maharashtra_division_under_nizamshah",
+      "patterns": ["How was Maharashtra divided under Nizamshah?", "Tell me about the division of Maharashtra under Nizamshah's rule", "What territories did Nizamshah control in Maharashtra?"],
+      "responses": ["Under Nizamshah's rule, Maharashtra was divided, and a significant portion was controlled by the Nizamshah of Ahmadnagar, leading to oppression and unrest.", "Nizamshah's rule led to the division of Maharashtra, with territories falling under the control of the Nizamshah of Ahmadnagar, resulting in oppression and unrest."],
+      "context": []
+    },
+    {
+      "tag": "adilshah_rule_in_maharashtra",
+      "patterns": ["How did Adilshah rule Maharashtra?", "Tell me about Adilshah's governance in Maharashtra", "What territories did Adilshah control in Maharashtra?"],
+      "responses": ["Adilshah ruled over a part of Maharashtra, and along with Nizamshah, contributed to the oppression of the people. The constant conflict between them added to the misery of the residents.", "Adilshah's rule in Maharashtra, alongside Nizamshah, resulted in oppression and conflict, causing misery for the people."],
+      "context": []
+    },
+    {
+      "tag": "watandars_internal_conflicts",
+      "patterns": ["How did internal conflicts among Watandars affect Maharashtra?", "Tell me about the impact of Watandars' conflicts on Maharashtra", "Why were Watandars fighting among themselves?"],
+      "responses": ["Internal conflicts among Watandars brought great misery to the people of Maharashtra. Constant fighting and disputes added to the oppression and injustice faced by the residents.", "The internal conflicts among Watandars led to great misery in Maharashtra, with constant fighting contributing to the overall oppression and injustice experienced by the residents."],
+      "context": []
+    },
+    {
+      "tag": "hindavi_swaraj_principles",
+      "patterns": ["What were the principles of Hindavi Swaraj established by Shivaji Maharaj?", "Tell me about the guiding principles of Hindavi Swaraj", "What values did Shivaji Maharaj emphasize in establishing Hindavi Swaraj?"],
+      "responses": ["Hindavi Swaraj, established by Shivaji Maharaj, was based on justice, fair play, and equal treatment for people of all castes and religions. He made no distinctions between Hindus and Muslims, honoring the saints of all religions.", "The principles of Hindavi Swaraj included justice, fair play, and equal treatment for people of all castes and religions. Shivaji Maharaj emphasized unity, disregarding distinctions between Hindus and Muslims, and honored saints from all religions."],
+      "context": []
+    },
+    {
+      "tag": "shivaji_maharaj_respect_today",
+      "patterns": ["Why does Shivaji Maharaj command respect today?", "Tell me about the enduring respect for Shivaji Maharaj", "Why is Shivaji Maharaj revered in modern times?"],
+      "responses": ["Shivaji Maharaj commands respect today for his role in establishing Swaraj, promoting justice, and fostering unity among people. His principles of governance continue to inspire and hold relevance.", "The enduring respect for Shivaji Maharaj stems from his contributions to establishing Swaraj, promoting justice, and fostering unity. His principles of governance remain inspirational and relevant in modern times."],
+      "context": []
+    },
+    {
+      "tag": "inspiration_from_saints",
+      "patterns": ["How did saints in Maharashtra inspire Shivaji Maharaj?", "Tell me about the influence of saints on Shivaji Maharaj", "What role did the saints play in Shivaji Maharaj's efforts?"],
+      "responses": ["Saints born in Maharashtra during the preceding centuries inspired Shivaji Maharaj in his efforts to establish Swaraj. The next chapter will delve into the significant contributions of these saints.", "The saints born in Maharashtra during the centuries before Shivaji Maharaj played a crucial role in inspiring and supporting his efforts to establish Swaraj. The next chapter will provide more details about the impactful contributions of these saints."],
+      "context": []
+    },
+    {
+      "tag": "shivaji_maharaj_deeds_inspiration",
+      "patterns": ["What noble deeds of Shivaji Maharaj inspire us today?", "Tell me about the noble actions of Shivaji Maharaj that are inspirational", "Why do we draw inspiration from Shivaji Maharaj's deeds?"],
+      "responses": ["We draw inspiration from Shivaji Maharaj's noble deeds, such as establishing Swaraj, promoting justice, and treating people equally regardless of caste or religion. His inclusive approach and respect for all religions serve as enduring sources of inspiration.", "Shivaji Maharaj's noble deeds, including the establishment of Swaraj, promotion of justice, and his inclusive approach, inspire us today. His respect for all religions and commitment to equality continue to be sources of enduring inspiration."],
+      "context": []
+    },
+    {
+      "tag": "role_of_maharashtra_watandars",
+      "patterns": ["What role did Maharashtra Watandars play in Shivaji Maharaj's efforts?", "Tell me about the contribution of Watandars in establishing Swaraj", "How did Watandars support Shivaji Maharaj?"],
+      "responses": ["Maharashtra Watandars played a crucial role in Shivaji Maharaj's efforts by initially fighting among themselves. Shivaji Maharaj later united them and used their support to establish Swaraj, bringing about positive change.", "Initially engaged in internal conflicts, Maharashtra Watandars became key supporters of Shivaji Maharaj's efforts. He united them, and their collective support played a significant role in establishing Swaraj and bringing positive change."],
+      "context": []
+    },
+    {
+      "tag": "impact_of_shivaji_maharaj_rule",
+      "patterns": ["How did Shivaji Maharaj's rule impact Maharashtra?", "Tell me about the positive impact of Shivaji Maharaj's governance", "What changes did Shivaji Maharaj bring to Maharashtra?"],
+      "responses": ["Shivaji Maharaj's rule had a positive impact on Maharashtra, ending oppression and injustice. His governance brought about stability, allowing people to freely celebrate festivals, worship, and live without constant fear.", "Shivaji Maharaj's rule brought positive changes to Maharashtra by ending oppression and injustice. Under his governance, people could freely celebrate festivals, worship, and live without constant fear, bringing about stability."],
+      "context": []
+    },
+    {
+      "tag": "shivaji_hindavi_swaraj_values",
+      "patterns": ["What values did Shivaji Maharaj emphasize in Hindavi Swaraj?", "Tell me about the core values of Hindavi Swaraj", "What principles guided Shivaji Maharaj's governance?"],
+      "responses": ["Shivaji Maharaj emphasized values like justice, fairness, and equal treatment in Hindavi Swaraj. His governance was guided by principles that aimed at the welfare of all, irrespective of caste or religion.", "In Hindavi Swaraj, Shivaji Maharaj emphasized values such as justice, fairness, and equal treatment for all. His governance was guided by principles that prioritized the welfare of all citizens, regardless of caste or religion."],
+      "context": []
+    },
+    {
+      "tag": "impact_of_shivaji_maharaj_rule_on_people",
+      "patterns": ["How did Shivaji Maharaj's rule impact the lives of the people?", "Tell me about the positive changes brought by Shivaji Maharaj to the lives of the people", "What improvements were seen under Shivaji Maharaj's governance?"],
+      "responses": ["Shivaji Maharaj's rule brought positive changes to the lives of the people, providing stability and allowing for the free celebration of festivals, worship, and a sense of safety in their homes.", "Under Shivaji Maharaj's rule, people experienced positive changes in their lives, including stability, the freedom to celebrate festivals, worship, and a sense of safety in their homes."],
+      "context": []
+    },
+    {
+      "tag": "watandars_unification",
+      "patterns": ["How did Shivaji Maharaj unify the Watandars?", "Tell me about the unification of Watandars under Shivaji Maharaj", "What role did Watandars play in the establishment of Swaraj?"],
+      "responses": ["Shivaji Maharaj unified the Watandars by resolving their internal conflicts and leveraging their support in the establishment of Swaraj. The collective effort of Watandars played a crucial role in positive change.", "Through the resolution of internal conflicts, Shivaji Maharaj unified the Watandars, using their collective support to establish Swaraj and bring about positive change."],
+      "context": []
+    },
+    {
+      "tag": "shivaji_maharaj_and_religious_harmony",
+      "patterns": ["How did Shivaji Maharaj promote religious harmony?", "Tell me about Shivaji Maharaj's approach to religious tolerance", "What steps did Shivaji Maharaj take to ensure harmony among different religions?"],
+      "responses": ["Shivaji Maharaj promoted religious harmony by making no distinction between Hindus and Muslims, honoring saints from all religions, and establishing 'Hindavi Swaraj' based on justice and equal treatment for people of all castes and religions.", "Promoting religious harmony, Shivaji Maharaj made no distinctions between Hindus and Muslims. He honored saints from all religions and based 'Hindavi Swaraj' on justice and equal treatment for people of all castes and religions."],
+      "context": []
+    },
+    {
+      "tag": "legacy_of_maharashtra_saints",
+      "patterns": ["Tell me about the legacy of saints born in Maharashtra before Shivaji Maharaj", "What impact did Maharashtra saints have on the establishment of Swaraj?", "How did saints contribute to Shivaji Maharaj's mission?"],
+      "responses": ["The saints born in Maharashtra before Shivaji Maharaj left a lasting legacy that inspired and supported his mission of establishing Swaraj. Their contributions played a crucial role in the positive changes brought about by Shivaji Maharaj.", "The saints born in Maharashtra before Shivaji Maharaj had a profound impact on his mission to establish Swaraj. Their contributions were instrumental in bringing about positive changes during Shivaji Maharaj's rule."],
+      "context": []
+    },
+    {
+      "tag": "medieval_maharashtra",
+      "patterns": ["Describe Maharashtra during the medieval period", "What was the state of Maharashtra in medieval times?", "Tell me about the historical context of Maharashtra before Shivaji Maharaj"],
+      "responses": ["During the medieval period, Maharashtra faced challenges with oppressive rulers, internal conflicts, and a lack of freedom. Shivaji Maharaj's rule brought positive change to the region.", "In the medieval period, Maharashtra experienced challenges with oppressive rulers, internal conflicts, and limited freedom. Shivaji Maharaj's governance later transformed the region positively."],
+      "context": []
+    },
+    {
+      "tag": "oppressive_rule_in_maharashtra",
+      "patterns": ["How were the people of Maharashtra affected by oppressive rule?", "Describe the impact of oppressive rulers on Maharashtra", "In what ways did the oppressive rule impact the lives of the people in Maharashtra?"],
+      "responses": ["The oppressive rule in Maharashtra led to suffering, injustice, and constant conflict. People faced difficulties in daily life, from insufficient food to restrictions on festivals and worship.", "Under oppressive rule, Maharashtra suffered from injustice, conflict, and various hardships. The people struggled with issues like insufficient food, restrictions on festivals, and limitations on worship."],
+      "context": []
+    },
+    {
+      "tag": "maharashtra_divided_rule",
+      "patterns": ["Explain how Maharashtra was divided under Nizamshah and Adilshah", "What territories were controlled by Nizamshah and Adilshah in Maharashtra?", "Tell me about the division of Maharashtra under Nizamshah and Adilshah's rule"],
+      "responses": ["Nizamshah and Adilshah divided Maharashtra among themselves, contributing to conflict and suffering. The people were oppressed and lacked safety and stability in their homes.", "Maharashtra was divided among Nizamshah and Adilshah, leading to conflict and suffering. The people faced oppression and lived without safety and stability in their homes."],
+      "context": []
+    },
+    {
+      "tag": "role_of_watandars",
+      "patterns": ["How did Watandars contribute to the misery in Maharashtra?", "Describe the role of Watandars in the internal conflicts", "Explain the impact of Watandars' actions on the people of Maharashtra"],
+      "responses": ["Watandars, like Deshmukhs and Deshpandes, contributed to misery by prioritizing their Jagirs over the welfare of the country. Their constant fighting added to the suffering of the people.", "Watandars, including Deshmukhs and Deshpandes, added to the misery in Maharashtra by prioritizing their Jagirs over the welfare of the country. Their constant fighting brought suffering to the people."],
+      "context": []
+    },
+    {
+      "tag": "misrule_and_injustice",
+      "patterns": ["Describe the state of misrule and injustice in Maharashtra", "Explain how misrule affected the lives of people", "Tell me about the prevailing injustice and misrule in Maharashtra before Shivaji Maharaj"],
+      "responses": ["Misrule was rampant in Maharashtra, with people facing injustice and oppression. Daily life was difficult, and there was a lack of safety, leading to discontent among the population.", "Before Shivaji Maharaj, Maharashtra experienced widespread misrule, injustice, and oppression. Daily life was challenging, and people lacked safety, causing discontent among the population."],
+      "context": []
+    },
+    {
+      "tag": "maharashtra_saints_before_shivaji",
+      "patterns": ["What role did saints play in Maharashtra before Shivaji Maharaj?", "Tell me about the saints born in Maharashtra during the medieval period", "Explain how the saints influenced the social and cultural landscape before Shivaji Maharaj"],
+      "responses": ["Saints born in Maharashtra during the medieval period influenced the social and cultural landscape. Their work set the stage for positive change and inspired Shivaji Maharaj's mission of establishing Swaraj.", "The saints born in Maharashtra during the medieval period had a profound impact on the social and cultural landscape. Their contributions laid the foundation for positive change and influenced Shivaji Maharaj's mission."],
+      "context": []
+    },
+    {
+      "tag": "watandars_oppression_resolution",
+      "patterns": ["How did Shivaji Maharaj resolve the conflicts among Watandars?", "Explain the role of Watandars in Shivaji Maharaj's plan for Swaraj", "Tell me about the resolution of Watandars' conflicts under Shivaji Maharaj"],
+      "responses": ["Shivaji Maharaj resolved conflicts among Watandars, using their support in his plan to establish Swaraj. The unity of Watandars played a crucial role in the positive changes brought by Shivaji Maharaj.", "By resolving conflicts among Watandars, Shivaji Maharaj garnered their support in establishing Swaraj. The unity of Watandars was instrumental in the positive changes during Shivaji Maharaj's rule."],
+      "context": []
+    },
+    {
+      "tag": "maharashtra_people_unhappiness",
+      "patterns": ["Why were the people of Maharashtra unhappy before Shivaji Maharaj?", "Explain the factors contributing to the unhappiness of Maharashtra residents", "Tell me about the discontent and grievances of the people in Maharashtra"],
+      "responses": ["Before Shivaji Maharaj, the people of Maharashtra were unhappy due to oppression, injustice, constant conflict, and a lack of safety. Their grievances stemmed from difficulties in daily life and restrictions on festivals and worship.", "The unhappiness of Maharashtra residents before Shivaji Maharaj was fueled by oppression, injustice, constant conflict, and a lack of safety. Grievances included difficulties in daily life and restrictions on festivals and worship."],
+      "context": []
+    },
+    {
+      "tag": "maharashtra_pre_shivaji_misery",
+      "patterns": ["Describe the overall state of misery in Maharashtra before Shivaji Maharaj", "Explain how misery affected the lives of the people", "Tell me about the widespread suffering and discontent in Maharashtra pre-Shivaji Maharaj"],
+      "responses": ["Before Shivaji Maharaj, Maharashtra experienced widespread misery with oppression, injustice, and constant conflict. People faced difficulties in daily life, hindering their ability to celebrate festivals and worship freely.", "The overall state of misery in Maharashtra before Shivaji Maharaj included oppression, injustice, and constant conflict. People struggled with difficulties in daily life and lived without the freedom to celebrate festivals and worship openly."],
+      "context": []
+    },
+    {
+      "tag": "maharashtra_oppression_by_nizamshah_adilshah",
+      "patterns": ["How did the rule of Nizamshah and Adilshah oppress the people of Maharashtra?", "Explain the impact of Nizamshah and Adilshah's rule on Maharashtra residents", "Tell me about the hardships faced by the people under the rule of Nizamshah and Adilshah"],
+      "responses": ["The rule of Nizamshah and Adilshah oppressed the people of Maharashtra, leading to suffering, limited freedom, and constant conflict. The residents faced hardships in various aspects of life under their divided rule.", "Under the rule of Nizamshah and Adilshah, Maharashtra residents experienced oppression, limited freedom, and constant conflict. The divided rule of these Sultans brought hardships in various aspects of their lives."],
+      "context": []
+    },
+    {
+      "tag": "fillintheblankchp1.1",
+      "patterns": ["The time in which Shivaji Maharaj lived was that of the .......... period", "time in which Shivaji Maharaj lived", "what period shivaji maharaj lived?"],
+      "responses": ["Medival", "The time in which Shivaji Maharaj lived was that of the medieval period.", "Medival peroid"],
+      "context": []
+    },
+    {
+      "tag": "fillintheblankchp1.2",
+      "patterns": ["Shivaji Maharaj established Swaraj in .......... .", "Shivaji Maharaj established Swaraj in", "Swaraj was established in"],
+      "responses": ["Maharashtra", "Shivaji Maharaj established Swaraj in Maharashtra."],
+      "context": []
+    },
+    {
+      "tag": "matchchp1.1",
+      "patterns": ["emperor of vijaynagar", "vijaynagar emperor"],
+      "responses": ["Krishnadevraya"],
+      "context": []
+    },
+    {
+      "tag": "matchchp1.2",
+      "patterns": ["Sultan of Ahmadnagar", "Ahmadnagar Sultan"],
+      "responses": ["Nizamshah"],
+      "context": []
+    },
+    {
+      "tag": "matchchp1.3",
+      "patterns": ["Sultan of Bijapur", "bijapur sultan"],
+      "responses": ["Adilshah"],
+      "context": []
+    },
+    {
+      "tag": "onesentencechp1.1",
+      "patterns": ["Name the kings who looked after the welfare of their subjects."],
+      "responses": ["The kings who looked after the welfare of their subjects were Emperor Akbar in the North and Emperor Krishnadevraya of Vijaynagar in the South."],
+      "context": []
+    },
+    {
+      "tag": "onesentencechp1.2",
+      "patterns": ["What noble task did Shivaji Maharaj undertake ?"],
+      "responses": ["Shivaji Maharaj undertook the noble task of establishing Swaraj in Maharashtra."],
+      "context": []
+    },
+    {
+      "tag": "onesentencechp1.3",
+      "patterns": ["Who did Shivaji Maharaj fight against ?"],
+      "responses": ["Shivaji Maharaj fought against oppressive powers that ruled over Maharashtra."],
+      "context": []
+    },
+    {
+      "tag": "oddmanoutchp1.1",
+      "patterns": ["Swaraj, slavery, freedom"],
+      "responses": ["Slavery"],
+      "context": []
+    },
+    {
+      "tag": "oddmanoutchp1.2",
+      "patterns": ["People, subjects, king"],
+      "responses": ["King"],
+      "context": []
+    }
+  ]
+}
