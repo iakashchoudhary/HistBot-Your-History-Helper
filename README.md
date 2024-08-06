@@ -86,4 +86,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 For questions or inquiries, please contact:
 
 - **Akash Choudhary** - [@iakashchoudhary](https://github.com/iakashchoudhary)
-- **Tahera Ansari** - [@taheraansary](https://github.com/taheraansary)
+- **Tahera Kausar Ansari** - [@taheraansary](https://github.com/taheraansary)
