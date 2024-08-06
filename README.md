@@ -12,8 +12,8 @@ A dynamic tool designed to assist with learning and exploring historical informa
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Acknowledgements](#acknowledgements)
-- [License](#license)
 - [Contact](#contact)
+- [License](#license)
 
 ## Introduction
 
@@ -77,13 +77,13 @@ We would like to thank the following individuals and organizations for their sup
 - **Streamlit:** For the platform that allows us to create and deploy this application with ease.
 - **Contributors:** Thanks to everyone who has contributed to this project through suggestions, code, and feedback.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Contact
 
 For questions or inquiries, please contact:
 
 - **Akash Choudhary** - [@iakashchoudhary](https://github.com/iakashchoudhary)
 - **Tahera Kausar Ansari** - [@taheraansary](https://github.com/taheraansary)
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
