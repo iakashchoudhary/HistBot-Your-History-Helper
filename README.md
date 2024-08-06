@@ -13,6 +13,7 @@ A dynamic tool designed to assist with learning and exploring historical informa
 - [Contributing](#contributing)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
+- [Contact](#contact)
 
 ## Introduction
 
@@ -79,3 +80,10 @@ We would like to thank the following individuals and organizations for their sup
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or inquiries, please contact:
+
+- **Akash Choudhary** - [@iakashchoudhary](https://github.com/iakashchoudhary)
+- **Tahera Ansari** - [@taheraansary](https://github.com/taheraansary)
