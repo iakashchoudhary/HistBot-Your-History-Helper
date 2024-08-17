@@ -42,28 +42,19 @@ clues_down = {
 # Title
 st.title("Interactive Crossword Game")
 
-# Function to render each cell with number, letter, or black
-def render_cell(cell, letter, filled):
-    if cell == 0:
-        # Black cell
-        return "<div style='background-color:black; width:50px; height:50px; display:inline-block;'></div>"
-    elif filled:
-        # Pre-filled cell
-        return f"<div style='border:1px solid black; width:50px; height:50px; display:flex; align-items:center; justify-content:center; background-color:lightgray;'>{letter}</div>"
-    else:
-        # Empty cell with number
-        return f"<div style='border:1px solid black; width:50px; height:50px; display:flex; align-items:center; justify-content:center; position:relative;'>{letter}</div>"
+# Function to render the grid
+def render_grid(grid, solution):
+    for i, row in enumerate(grid):
+        cols = st.columns(len(row))
+        for j, cell in enumerate(row):
+            if cell == 0:
+                cols[j].markdown("<div style='background-color:black; width:50px; height:50px;'></div>", unsafe_allow_html=True)
+            else:
+                prefilled_letter = solution[i][j] if solution[i][j] else ''
+                cols[j].text_input("", value=prefilled_letter, max_chars=1, key=f"{i}-{j}", help=f"Cell {i+1},{j+1}")
 
-# Display the crossword grid
-st.markdown("<div style='display:grid; grid-template-columns:repeat(9, 50px); gap:1px;'>", unsafe_allow_html=True)
-for i, row in enumerate(grid):
-    for j, cell in enumerate(row):
-        if cell != 0:
-            prefilled_letter = solution[i][j] if solution[i][j] else ''
-            st.markdown(render_cell(cell, prefilled_letter, bool(prefilled_letter)), unsafe_allow_html=True)
-        else:
-            st.markdown(render_cell(0, '', False), unsafe_allow_html=True)
-st.markdown("</div>", unsafe_allow_html=True)
+# Render the crossword grid
+render_grid(grid, solution)
 
 # Display the clues
 st.subheader("Across")
