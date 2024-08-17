@@ -11,6 +11,12 @@ grid = [
     [0, 23, 23, 24, 0, 25, 0, 0, 0],
 ]
 
+# Define the pre-filled letters (clue letters)
+pre_filled_letters = {
+    (0, 1): 'T', (2, 0): 'R', (3, 4): 'R',
+    (4, 1): 'I', (5, 5): 'U', (6, 3): 'E'
+}
+
 # Define the positions and lengths of the answers for each clue
 answers_across = {
     1: (0, 0, 2),  # Start at (0,0), length 2
@@ -57,13 +63,12 @@ clues_down = {
     5: "To stare intently."
 }
 
-# Create inputs for Across clues
+# Create inputs for Across and Down clues
 st.subheader("Across")
 across_answers = {}
 for num, clue in clues_across.items():
     across_answers[num] = st.text_input(f"{num}. {clue}")
 
-# Create inputs for Down clues
 st.subheader("Down")
 down_answers = {}
 for num, clue in clues_down.items():
@@ -76,14 +81,28 @@ def render_grid():
         for j, cell in enumerate(row):
             if cell == 0:
                 cols[j].markdown("<div style='background-color:black; width:50px; height:50px;'></div>", unsafe_allow_html=True)
-            elif cell in answers_across:
-                answer = across_answers.get(cell, "")
-                if len(answer) > 0:
-                    cols[j].markdown(f"<div style='border:1px solid black; width:50px; height:50px; display:flex; align-items:center; justify-content:center;'>{answer[j - answers_across[cell][1]]}</div>", unsafe_allow_html=True)
-                else:
-                    cols[j].markdown(f"<div style='border:1px solid black; width:50px; height:50px;'></div>", unsafe_allow_html=True)
             else:
-                cols[j].markdown(f"<div style='border:1px solid black; width:50px; height:50px;'></div>", unsafe_allow_html=True)
+                input_value = ''
+                if (i, j) in pre_filled_letters:
+                    input_value = pre_filled_letters[(i, j)]
+                else:
+                    key = f"cell_{i}_{j}"
+                    input_value = st.text_input("", value="", max_chars=1, key=key)
+                
+                cols[j].markdown(f"<div style='border:1px solid black; width:50px; height:50px; display:flex; align-items:center; justify-content:center;'>{input_value}</div>", unsafe_allow_html=True)
 
-# Render the crossword grid
+# Display the grid layout
+st.title("Interactive Crossword Game")
 render_grid()
+
+# Display the clues
+col1, col2 = st.columns(2)
+with col1:
+    st.subheader("Across")
+    for num, clue in clues_across.items():
+        st.markdown(f"**{num}.** {clue}")
+
+with col2:
+    st.subheader("Down")
+    for num, clue in clues_down.items():
+        st.markdown(f"**{num}.** {clue}")
