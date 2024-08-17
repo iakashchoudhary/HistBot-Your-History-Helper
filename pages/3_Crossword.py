@@ -46,35 +46,23 @@ answers_across = {
     25: (6, 5, 1),
 }
 
-# Clues for Across and Down sections
-clues_across = {
-    1: "High-level, general-purpose programming language.",
-    2: "Tool for digging.",
-    3: "Suffix indicating a profession.",
-    4: "Command for Linux OS.",
-    5: "Code repository platform."
+# Colors for across and down clues
+colors = {
+    "across": "#ffffff",  # White
+    "down": "#d3d3d3"     # Light grey
 }
 
-clues_down = {
-    1: "Unit of language that contains meaning.",
-    2: "Common programming language for web development.",
-    3: "Term for system memory.",
-    4: "Red fruit.",
-    5: "To stare intently."
-}
+# Map cell to clue type (across or down)
+cell_clue_type = {}
+for num, (r, c, length) in answers_across.items():
+    for i in range(length):
+        cell_clue_type[(r, c + i)] = "across"
 
-# Create inputs for Across and Down clues
-st.subheader("Across")
-across_answers = {}
-for num, clue in clues_across.items():
-    across_answers[num] = st.text_input(f"{num}. {clue}")
+for num, (r, c, length) in answers_across.items():
+    for i in range(length):
+        cell_clue_type[(r + i, c)] = "down"
 
-st.subheader("Down")
-down_answers = {}
-for num, clue in clues_down.items():
-    down_answers[num] = st.text_input(f"{num}. {clue}")
-
-# Function to render the crossword grid based on inputs
+# Function to render the crossword grid
 def render_grid():
     for i, row in enumerate(grid):
         cols = st.columns(len(row))
@@ -82,14 +70,22 @@ def render_grid():
             if cell == 0:
                 cols[j].markdown("<div style='background-color:black; width:50px; height:50px;'></div>", unsafe_allow_html=True)
             else:
+                clue_type = cell_clue_type.get((i, j), "across")
+                color = colors[clue_type]
                 input_value = ''
                 if (i, j) in pre_filled_letters:
                     input_value = pre_filled_letters[(i, j)]
                 else:
                     key = f"cell_{i}_{j}"
                     input_value = st.text_input("", value="", max_chars=1, key=key)
-                
-                cols[j].markdown(f"<div style='border:1px solid black; width:50px; height:50px; display:flex; align-items:center; justify-content:center;'>{input_value}</div>", unsafe_allow_html=True)
+
+                # Display the cell with small number and input
+                cell_content = f"<div style='border:1px solid black; background-color:{color}; width:50px; height:50px; position:relative;'>"
+                cell_content += f"<div style='position:absolute; top:0; left:0; font-size:10px; padding:2px;'>{cell}</div>"
+                cell_content += f"<div style='display:flex; align-items:center; justify-content:center; height:100%;'>{input_value}</div>"
+                cell_content += "</div>"
+
+                cols[j].markdown(cell_content, unsafe_allow_html=True)
 
 # Display the grid layout
 st.title("Interactive Crossword Game")
