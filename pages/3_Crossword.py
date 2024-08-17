@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Define the crossword grid with pre-filled letters and empty spaces
+# Define the crossword grid structure
 grid = [
     [1, 1, 0, 2, 2, 2, 0, 3, 3],
     [4, 0, 0, 5, 0, 6, 6, 0, 7],
@@ -11,56 +11,79 @@ grid = [
     [0, 23, 23, 24, 0, 25, 0, 0, 0],
 ]
 
-# Define the solution (correct answers)
-solution = [
-    ['S', 'T', 0, 'C', 'R', 'O', 0, 'P', 'Y'],
-    ['T', 0, 0, 'O', 0, 'A', 'P', 0, 'T'],
-    ['R', 'E', 'A', 'M', 0, 'T', 0, 0, 'H'],
-    [0, 'A', 0, 0, 'R', 'I', 'A', 'L', 'E'],
-    ['L', 'I', 'T', 0, 'S', 0, 0, 'E', 0],
-    ['E', 0, 0, 'H', 'O', 'U', 'S', 'E', 'S'],
-    [0, 'A', 'S', 'E', 0, 'I', 0, 0, 0],
-]
+# Define the positions and lengths of the answers for each clue
+answers_across = {
+    1: (0, 0, 2),  # Start at (0,0), length 2
+    2: (0, 3, 3),  # Start at (0,3), length 3
+    3: (0, 7, 2),  # Start at (0,7), length 2
+    4: (1, 0, 1),
+    5: (1, 3, 1),
+    6: (1, 5, 2),
+    7: (1, 8, 1),
+    8: (2, 0, 4),
+    9: (2, 1, 2),
+    10: (2, 3, 1),
+    11: (2, 5, 1),
+    12: (2, 8, 1),
+    13: (3, 1, 1),
+    14: (3, 4, 3),
+    15: (3, 7, 2),
+    16: (4, 0, 3),
+    17: (4, 1, 2),
+    18: (4, 4, 1),
+    19: (4, 7, 1),
+    20: (5, 0, 1),
+    21: (5, 3, 4),
+    22: (5, 7, 2),
+    23: (6, 1, 2),
+    24: (6, 3, 1),
+    25: (6, 5, 1),
+}
 
 # Clues for Across and Down sections
 clues_across = {
     1: "High-level, general-purpose programming language.",
-    4: "Tool for digging.",
-    6: "Suffix indicating a profession.",
-    7: "Command for Linux OS.",
-    8: "Code repository platform."
+    2: "Tool for digging.",
+    3: "Suffix indicating a profession.",
+    4: "Command for Linux OS.",
+    5: "Code repository platform."
 }
 
 clues_down = {
     1: "Unit of language that contains meaning.",
     2: "Common programming language for web development.",
     3: "Term for system memory.",
-    5: "Red fruit.",
-    6: "To stare intently."
+    4: "Red fruit.",
+    5: "To stare intently."
 }
 
-# Title
-st.title("Interactive Crossword Game")
+# Create inputs for Across clues
+st.subheader("Across")
+across_answers = {}
+for num, clue in clues_across.items():
+    across_answers[num] = st.text_input(f"{num}. {clue}")
 
-# Function to render the grid
-def render_grid(grid, solution):
+# Create inputs for Down clues
+st.subheader("Down")
+down_answers = {}
+for num, clue in clues_down.items():
+    down_answers[num] = st.text_input(f"{num}. {clue}")
+
+# Function to render the crossword grid based on inputs
+def render_grid():
     for i, row in enumerate(grid):
         cols = st.columns(len(row))
         for j, cell in enumerate(row):
             if cell == 0:
                 cols[j].markdown("<div style='background-color:black; width:50px; height:50px;'></div>", unsafe_allow_html=True)
+            elif cell in answers_across:
+                answer = across_answers.get(cell, "")
+                if len(answer) > 0:
+                    cols[j].markdown(f"<div style='border:1px solid black; width:50px; height:50px; display:flex; align-items:center; justify-content:center;'>{answer[j - answers_across[cell][1]]}</div>", unsafe_allow_html=True)
+                else:
+                    cols[j].markdown(f"<div style='border:1px solid black; width:50px; height:50px;'></div>", unsafe_allow_html=True)
             else:
-                prefilled_letter = solution[i][j] if solution[i][j] else ''
-                cols[j].text_input("", value=prefilled_letter, max_chars=1, key=f"{i}-{j}", help=f"Cell {i+1},{j+1}")
+                cols[j].markdown(f"<div style='border:1px solid black; width:50px; height:50px;'></div>", unsafe_allow_html=True)
 
 # Render the crossword grid
-render_grid(grid, solution)
-
-# Display the clues
-st.subheader("Across")
-for num, clue in clues_across.items():
-    st.markdown(f"**{num}.** {clue}")
-
-st.subheader("Down")
-for num, clue in clues_down.items():
-    st.markdown(f"**{num}.** {clue}")
+render_grid()
