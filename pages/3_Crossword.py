@@ -1,17 +1,17 @@
 import streamlit as st
 
-# Define the crossword grid with pre-filled letters
+# Define the crossword grid with pre-filled letters and empty spaces
 grid = [
-    [1, 1, 0, 1, 1, 1, 0, 1, 1],
-    [1, 0, 0, 1, 0, 1, 1, 0, 1],
-    [1, 1, 1, 1, 0, 1, 0, 0, 1],
-    [0, 1, 0, 0, 1, 1, 1, 1, 1],
-    [1, 1, 1, 0, 1, 0, 0, 1, 0],
-    [1, 0, 0, 1, 1, 1, 1, 1, 1],
-    [0, 1, 1, 1, 0, 1, 0, 0, 0],
+    [1, 1, 0, 2, 2, 2, 0, 3, 3],
+    [4, 0, 0, 5, 0, 6, 6, 0, 7],
+    [8, 9, 9, 10, 0, 11, 0, 0, 12],
+    [0, 13, 0, 0, 14, 14, 14, 15, 15],
+    [16, 17, 17, 0, 18, 0, 0, 19, 0],
+    [20, 0, 0, 21, 21, 21, 21, 22, 22],
+    [0, 23, 23, 24, 0, 25, 0, 0, 0],
 ]
 
-# Define the solution and pre-filled letters
+# Define the solution (correct answers)
 solution = [
     ['S', 'T', 0, 'C', 'R', 'O', 0, 'P', 'Y'],
     ['T', 0, 0, 'O', 0, 'A', 'P', 0, 'T'],
@@ -22,7 +22,7 @@ solution = [
     [0, 'A', 'S', 'E', 0, 'I', 0, 0, 0],
 ]
 
-# Define clues for Across and Down sections
+# Clues for Across and Down sections
 clues_across = {
     1: "High-level, general-purpose programming language.",
     4: "Tool for digging.",
@@ -39,23 +39,33 @@ clues_down = {
     6: "To stare intently."
 }
 
-# Initialize user input grid
-user_input = [['' for _ in row] for row in grid]
-
 # Title
 st.title("Interactive Crossword Game")
 
-# Display the crossword grid
-for i, row in enumerate(grid):
-    cols = st.columns(len(row))
-    for j, cell in enumerate(row):
-        if cell == 1:
-            prefill = solution[i][j] if solution[i][j] else ''
-            user_input[i][j] = cols[j].text_input("", value=prefill, max_chars=1, key=f"{i}-{j}")
-        else:
-            cols[j].markdown(f"<div style='background-color:black; width: 50px; height: 50px;'></div>", unsafe_allow_html=True)
+# Function to render each cell with number, letter, or black
+def render_cell(cell, letter, filled):
+    if cell == 0:
+        # Black cell
+        return "<div style='background-color:black; width:50px; height:50px; display:inline-block;'></div>"
+    elif filled:
+        # Pre-filled cell
+        return f"<div style='border:1px solid black; width:50px; height:50px; display:flex; align-items:center; justify-content:center; background-color:lightgray;'>{letter}</div>"
+    else:
+        # Empty cell with number
+        return f"<div style='border:1px solid black; width:50px; height:50px; display:flex; align-items:center; justify-content:center; position:relative;'>{letter}</div>"
 
-# Across and Down Sections
+# Display the crossword grid
+st.markdown("<div style='display:grid; grid-template-columns:repeat(9, 50px); gap:1px;'>", unsafe_allow_html=True)
+for i, row in enumerate(grid):
+    for j, cell in enumerate(row):
+        if cell != 0:
+            prefilled_letter = solution[i][j] if solution[i][j] else ''
+            st.markdown(render_cell(cell, prefilled_letter, bool(prefilled_letter)), unsafe_allow_html=True)
+        else:
+            st.markdown(render_cell(0, '', False), unsafe_allow_html=True)
+st.markdown("</div>", unsafe_allow_html=True)
+
+# Display the clues
 st.subheader("Across")
 for num, clue in clues_across.items():
     st.markdown(f"**{num}.** {clue}")
