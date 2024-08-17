@@ -72,12 +72,12 @@ def render_grid():
             else:
                 clue_type = cell_clue_type.get((i, j), "across")
                 color = colors[clue_type]
-                input_value = ''
-                if (i, j) in pre_filled_letters:
-                    input_value = pre_filled_letters[(i, j)]
-                else:
-                    key = f"cell_{i}_{j}"
-                    input_value = st.text_input("", value="", max_chars=1, key=key)
+                # input_value = ''
+                # if (i, j) in pre_filled_letters:
+                #     input_value = pre_filled_letters[(i, j)]
+                # else:
+                #     key = f"cell_{i}_{j}"
+                #     input_value = st.text_input("", value="", max_chars=1, key=key)
 
                 # Display the cell with small number and input
                 cell_content = f"<div style='border:1px solid black; background-color:{color}; width:50px; height:50px; position:relative;'>"
