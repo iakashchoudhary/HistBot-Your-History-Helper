@@ -52,6 +52,23 @@ colors = {
     "down": "#d3d3d3"     # Light grey
 }
 
+# Clues for Across and Down sections
+clues_across = {
+    1: "High-level, general-purpose programming language.",
+    2: "Tool for digging.",
+    3: "Suffix indicating a profession.",
+    4: "Command for Linux OS.",
+    5: "Code repository platform."
+}
+
+clues_down = {
+    1: "Unit of language that contains meaning.",
+    2: "Common programming language for web development.",
+    3: "Term for system memory.",
+    4: "Red fruit.",
+    5: "To stare intently."
+}
+
 # Map cell to clue type (across or down)
 cell_clue_type = {}
 for num, (r, c, length) in answers_across.items():
@@ -72,12 +89,12 @@ def render_grid():
             else:
                 clue_type = cell_clue_type.get((i, j), "across")
                 color = colors[clue_type]
-                # input_value = ''
-                # if (i, j) in pre_filled_letters:
-                #     input_value = pre_filled_letters[(i, j)]
-                # else:
-                #     key = f"cell_{i}_{j}"
-                #     input_value = st.text_input("", value="", max_chars=1, key=key)
+                input_value = ''
+                if (i, j) in pre_filled_letters:
+                    input_value = pre_filled_letters[(i, j)]
+                else:
+                    key = f"cell_{i}_{j}"
+                    input_value = st.text_input("", value="", max_chars=1, key=key)
 
                 # Display the cell with small number and input
                 cell_content = f"<div style='border:1px solid black; background-color:{color}; width:50px; height:50px; position:relative;'>"
