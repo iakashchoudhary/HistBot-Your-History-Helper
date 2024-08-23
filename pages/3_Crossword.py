@@ -77,18 +77,3 @@ def render_grid():
 # Display the grid layout
 st.title("Interactive Crossword Game")
 render_grid()
-
-# Input sections for Across and Down clues
-st.subheader("Input your answers:")
-
-col1, col2 = st.columns(2)
-
-with col1:
-    st.subheader("Across")
-    for num, clue in clues_across.items():
-        st.text_input(f"{num}. {clue}")
-
-with col2:
-    st.subheader("Down")
-    for num, clue in clues_down.items():
-        st.text_input(f"{num}. {clue}")
