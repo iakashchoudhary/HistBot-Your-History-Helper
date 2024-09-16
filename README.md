@@ -1,6 +1,7 @@
-# 🛡️ **HistBot - Your History Helper** 📜
+# 📜 **HistBot - Your History Helper**
 
-![HistBot Banner](https://path_to_banner_image)
+![HistBot Banner](https://github.com/user-attachments/assets/60576f59-75b8-4e4a-8619-dae7d8a2f9ec)
+
 
 **HistBot**: Your go-to app for exploring Maharashtra’s history, built with a TensorFlow/Keras neural network model. The app is optimized with **SGD**, logging **loss** and **accuracy** for efficiency. 
 
