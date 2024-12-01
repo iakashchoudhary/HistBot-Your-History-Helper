@@ -77,8 +77,8 @@ def response(user_response, tfidf, lines_with_sentences):
         return f"{flattened_sentences[idx]} (Line {line_idx}, Sentence {sentence_idx})"
 
 def generate_user_random_seed():
-    seed_1 = 'bigSmileBoy.png'
-    seed_2 = 'bigSmileGirl.png'
+    seed_1 = 'assets\bigSmileBoy.png'
+    seed_2 = 'assets\bigSmileGirl.png'
     selected_seed = random.choice([seed_1, seed_2])
     return selected_seed
 
@@ -148,7 +148,7 @@ def main():
     seed = st.session_state.seed
 
     for message in st.session_state.ask_messages:
-        avatar = seed if message["role"] == "user" else 'bottts.png'
+        avatar = seed if message["role"] == "user" else 'assets\bottts.png'
         with st.chat_message(message["role"], avatar=avatar):
             st.markdown(message["content"])
 
@@ -160,7 +160,7 @@ def main():
         if "warning_displayed" in st.session_state:
             del st.session_state.warning_displayed
         
-        with st.chat_message("assistant", avatar='bottts.png'):
+        with st.chat_message("assistant", avatar='assets\bottts.png'):
             message_placeholder = st.empty()
             with st.spinner("HistBot is thinking..."):
                 assistant_response = response(prompt, tfidf, sent_tokens)
