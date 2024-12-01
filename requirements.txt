@@ -7,4 +7,4 @@ streamlit-chat
 tensorflow
 keras
 PyPDF2
-docx
+python-docx
