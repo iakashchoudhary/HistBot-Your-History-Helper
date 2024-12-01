@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 import nltk
 
-nltk.download('punkt_tab')
+# nltk.download('punkt_tab')
 
 from nltk.stem import WordNetLemmatizer
 from keras.api.models import load_model
