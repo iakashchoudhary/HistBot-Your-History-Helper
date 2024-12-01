@@ -6,3 +6,4 @@ streamlit
 streamlit-chat
 tensorflow
 keras
+PyPDF2
