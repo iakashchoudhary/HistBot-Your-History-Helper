@@ -11,9 +11,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 from PyPDF2 import PdfReader
 from docx import Document
 
-# nltk.download('punkt')
-# nltk.download('wordnet')
-# nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('stopwords')
 
 lemmatizer = nltk.stem.WordNetLemmatizer()
 stop_words = set(nltk.corpus.stopwords.words('english'))
