@@ -5,6 +5,7 @@ import numpy as np
 import nltk
 
 nltk.download('punkt_tab')
+nltk.download('wordnet')
 
 from nltk.stem import WordNetLemmatizer
 from keras.api.models import load_model
