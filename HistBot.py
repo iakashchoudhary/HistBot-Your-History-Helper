@@ -13,7 +13,7 @@ from keras.models import load_model
 import streamlit as st
 from streamlit_chat import message as st_message
 
-from langchain.schema import SystemMessage, HumanMessage, AIMessage
+from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 
 lemmatizer = WordNetLemmatizer()
 
