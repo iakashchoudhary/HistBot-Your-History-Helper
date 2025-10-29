@@ -8,7 +8,7 @@ nltk.download('punkt_tab')
 nltk.download('wordnet')
 
 from nltk.stem import WordNetLemmatizer
-from keras.api.models import load_model
+from keras.models import load_model
 
 import streamlit as st
 from streamlit_chat import message as st_message
